@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Default functionality</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://use.fontawesome.com/80fae27784.js"></script>
+    <script>
+        $( function() {
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $( "#opener" ).on( "click", function() {
+                $( "#dialog" ).dialog( "open" );
+            });
+        } );
+    </script>
+</head>
+<body>
+<div id="dialog" title="FORGOT YOUR PASSWORD?">
+    <label>ENTER YOUR<br> EMAIL</label>
+    <input type="password" name="password" >
+    <button class="submit" type="submit">RESET PASSWORD</button><br>
+       <h4>OR</h4><br>
+    <button class="facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i>Log In Using Facebook</a></button>
+</div>
+<button id="opener">Open Pop-up</button>
+</body>
+</html>
