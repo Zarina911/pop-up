@@ -100,9 +100,12 @@ div>button{
 a:-webkit-any-link{
     text-decoration: none;
 }
-.ui-widget-content a{
-    list-style: none;
-
+.ui-widget-content a {
+    color: #fff !important;
+    font-size: 12px !important;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+    font-size: 12px !important;
 }
 h4{
     text-align: center;
